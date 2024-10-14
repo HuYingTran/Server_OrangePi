@@ -1,37 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: hsl(24, 100%, 50%);
+    color: white;
+    padding: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons a, .contact-info span {
+    color: white;
+    margin-right: 10px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 40px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.account-info a {
+    color: white;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+.nav-bar {
+    background-color: #00AEEF;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar li {
+    position: relative;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav-bar .dropdown {
+    cursor: pointer;
+}
+
+.nav-bar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav-bar .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-bar .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-bar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.banner img {
+    width: 100%;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.image-gallery img {
+    margin-top: 100px; /* Đặt khoảng cách giữa tiêu đề và ảnh */
+    transform: scale(3); /* Phóng to ảnh ngay lập tức 200% */
+    transition: transform 0.3s ease;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.image-gallery img:hover {
+    transform: scale(3.05);
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
 body {
     display: flex;
-    flex-direction: column; /* Đảm bảo các phần tử xếp theo chiều dọc */
-    justify-content: center; 
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* Chiều cao toàn bộ trang */
-    margin: 0; 
-    background-color: #f4f4f4; /* Màu nền */
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
-h1 {
-    color: orange; /* Màu chữ cam */
-    margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và ảnh */
-    text-align: center; /* Canh giữa văn bản */
+.container {
+    display: flex;
+    align-items: center;
 }
 
-.large-image {
-    max-width: 80%; /* Chiếm 80% chiều rộng của khung nhìn */
-    height: auto; /* Đảm bảo tỉ lệ ảnh không bị biến dạng */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng cho ảnh */
+.button-table {
+    margin-right: 20px;
 }
 
-/* CSS cho nút */
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+/* Màu sắc cho các ô trong bảng */
+td:nth-child(1) {
+    background-color: #f39c12; /* Màu cam cho 3.3V */
+}
+
+td:nth-child(2) {
+    background-color: #e74c3c; /* Màu đỏ cho 5V */
+}
+
+td:contains('GND') {
+    background-color: #8e44ad; /* Màu tím cho GND */
+}
+
+td:contains('PH'), td:contains('PC') {
+    background-color: #3498db; /* Màu xanh cho PH và PC */
+}
+
+.button-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
 button {
-    padding: 10px 20px; /* Khoảng cách bên trong nút */
-    font-size: 16px; /* Kích thước chữ */
-    color: white; /* Màu chữ trắng */
-    background-color: orange; /* Màu nền cam */
-    border: none; /* Không có viền */
-    border-radius: 5px; /* Bo góc cho nút */
-    cursor: pointer; /* Con trỏ khi hover */
-    margin-top: 20px; /* Khoảng cách giữa nút và phần tử trên */
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: darkorange; /* Màu nền khi hover */
+    background-color: #0088cc;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.button-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-right: 20px;
+}
+
+/* Thiết kế button trong bảng */
+.button-table button {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Màu sắc cho các button */
+.button-3v {
+    background-color: #f39c12; /* Cam cho 3.3V */
+}
+
+.button-5v {
+    background-color: #e74c3c; /* Đỏ cho 5V */
+}
+
+.button-gnd {
+    background-color: #8e44ad; /* Tím cho GND */
+}
+
+.button-ph-pc {
+    background-color: #3498db; /* Xanh cho PH/PC */
+}
+
+.button-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.button-row button {
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-row button:hover {
+    background-color: #0088cc;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
 }

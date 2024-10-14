@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuynhTran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 style="text-align:center;">Orange Pi Zero 3</h1>
+
+    <div class="container">
+        <div class="button-table">
+            <!-- Các nút bấm trong bảng -->
+            <button class="button-3v" onclick="alert('3.3V button clicked!')">3.3V</button>
+            <button class="button-5v" onclick="alert('5V button clicked!')">5V</button>
+            <button class="button-ph-pc" onclick="alert('PH5 button clicked!')">PH5</button>
+            <button class="button-5v" onclick="alert('5V button clicked!')">5V</button>
+            <button class="button-ph-pc" onclick="alert('PH4 button clicked!')">PH4</button>
+            <button class="button-gnd" onclick="alert('GND button clicked!')">GND</button>
+            <button class="button-ph-pc" onclick="alert('PC9 button clicked!')">PC9</button>
+            <button class="button-ph-pc" onclick="alert('PH2 button clicked!')">PH2</button>
+            <button class="button-gnd" onclick="alert('GND button clicked!')">GND</button>
+            <button class="button-ph-pc" onclick="alert('PH3 button clicked!')">PH3</button>
+            <button class="button-ph-pc" onclick="alert('PC6 button clicked!')">PC6</button>
+            <button class="button-ph-pc" onclick="alert('PC11 button clicked!')">PC11</button>
+            <button class="button-ph-pc" onclick="alert('PC5 button clicked!')">PC5</button>
+            <button class="button-gnd" onclick="alert('GND button clicked!')">GND</button>
+            <button class="button-ph-pc" onclick="alert('PC8 button clicked!')">PC8</button>
+            <button class="button-ph-pc" onclick="alert('PC15 button clicked!')">PC15</button>
+            <button class="button-3v" onclick="alert('3.3V button clicked!')">3.3V</button>
+            <button class="button-ph-pc" onclick="alert('PC14 button clicked!')">PC14</button>
+            <button class="button-ph-pc" onclick="alert('PH7 button clicked!')">PH7</button>
+            <button class="button-gnd" onclick="alert('GND button clicked!')">GND</button>
+            <button class="button-ph-pc" onclick="alert('PH8 button clicked!')">PH8</button>
+            <button class="button-ph-pc" onclick="alert('PC7 button clicked!')">PC7</button>
+            <button class="button-ph-pc" onclick="alert('PH6 button clicked!')">PH6</button>
+            <button class="button-ph-pc" onclick="alert('PH9 button clicked!')">PH9</button>
+            <button class="button-gnd" onclick="alert('GND button clicked!')">GND</button>
+            <button class="button-ph-pc" onclick="alert('PC10 button clicked!')">PC10</button>
+        </div>
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="images/img_orangepi.png" alt="Embedded Board">
+            </div>
+        </div>
+    </div>
+
+    <div class="button-row">
+        <button onclick="alert('POWER button clicked!')">POWER</button>
+        <button onclick="alert('WIFI button clicked!')">WIFI</button>
+        <button onclick="alert('BLUETOOTH button clicked!')">BLUETOOTH</button>
+    </div>
+
+
+    
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="images/img_orangepi_device.png" alt="DEVICE">
+            <p class="image-caption">Ảnh 1</p>
+        </div>
+        <div class="image-container">
+            <img src="images/img_orangepi_pin.png" alt="PIN">
+            <p class="image-caption">Ảnh 2</p>
+        </div>
+    </div>
+
+    <script>
+        // Thêm logic để thay thế văn bản cụ thể và tô màu trong bảng.
+        document.querySelectorAll('td').forEach(td => {
+            if (td.textContent === 'GND') td.style.backgroundColor = '#8e44ad'; // Màu tím
+            if (td.textContent.startsWith('PH') || td.textContent.startsWith('PC')) {
+                td.style.backgroundColor = '#3498db'; // Màu xanh
+            }
+        });
+    </script>
+</body>
+</html>
