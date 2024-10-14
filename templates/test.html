@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Board Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .button-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+
+        /* Thiết kế button trong bảng */
+        .button-table button {
+            width: 80px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Màu sắc cho các button */
+        .button-3v { background-color: #f39c12; } /* Cam cho 3.3V */
+        .button-5v { background-color: #e74c3c; } /* Đỏ cho 5V */
+        .button-gnd { background-color: #8e44ad; } /* Tím cho GND */
+        .button-ph-pc { background-color: #3498db; } /* Xanh cho PH/PC */
+
+        img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Bố trí hàng button lớn */
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .button-row button {
+            width: 120px;
+            height: 50px;
+            font-size: 16px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-row button:hover {
+            background-color: #0088cc;
+        }
+
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Bảng nút bấm -->
+        <div class="button-table">
+            <button class="button-3v">3.3V</button>
+            <button class="button-5v">5V</button>
+            <button class="button-ph-pc">PH5</button>
+            <button class="button-5v">5V</button>
+            <button class="button-ph-pc">PH4</button>
+            <button class="button-gnd">GND</button>
+            <button class="button-ph-pc">PC9</button>
+            <button class="button-ph-pc">PH2</button>
+            <button class="button-gnd">GND</button>
+            <button class="button-ph-pc">PH3</button>
+            <button class="button-ph-pc">PC6</button>
+            <button class="button-ph-pc">PC11</button>
+            <button class="button-ph-pc">PC5</button>
+            <button class="button-gnd">GND</button>
+            <button class="button-ph-pc">PC8</button>
+            <button class="button-ph-pc">PC15</button>
+            <button class="button-3v">3.3V</button>
+            <button class="button-ph-pc">PC14</button>
+            <button class="button-ph-pc">PH7</button>
+            <button class="button-gnd">GND</button>
+            <button class="button-ph-pc">PH8</button>
+            <button class="button-ph-pc">PC7</button>
+            <button class="button-ph-pc">PH6</button>
+            <button class="button-ph-pc">PH9</button>
+            <button class="button-gnd">GND</button>
+            <button class="button-ph-pc">PC10</button>
+        </div>
+
+        <!-- Ảnh và các nút lớn bên dưới -->
+        <div class="right-panel">
+            <img src="image.png" alt="Embedded Board">
+            <div class="button-row">
+                <button onclick="alert('POWER button clicked!')">POWER</button>
+                <button onclick="alert('WIFI button clicked!')">WIFI</button>
+                <button onclick="alert('BLUETOOTH button clicked!')">BLUETOOTH</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
