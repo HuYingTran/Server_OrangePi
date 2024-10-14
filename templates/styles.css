@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column; /* Đảm bảo các phần tử xếp theo chiều dọc */
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; /* Chiều cao toàn bộ trang */
+    margin: 0; 
+    background-color: #f4f4f4; /* Màu nền */
+}
+
+h1 {
+    color: orange; /* Màu chữ cam */
+    margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và ảnh */
+    text-align: center; /* Canh giữa văn bản */
+}
+
+.large-image {
+    max-width: 80%; /* Chiếm 80% chiều rộng của khung nhìn */
+    height: auto; /* Đảm bảo tỉ lệ ảnh không bị biến dạng */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng cho ảnh */
+}
+
+/* CSS cho nút */
+button {
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ trắng */
+    background-color: orange; /* Màu nền cam */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover */
+    margin-top: 20px; /* Khoảng cách giữa nút và phần tử trên */
+}
+
+button:hover {
+    background-color: darkorange; /* Màu nền khi hover */
+}
