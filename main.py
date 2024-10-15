@@ -13,8 +13,8 @@ def index():
 def orangepi():
     return render_template('orangepi.html')
 
-@app.route('/esp32cam-stream')
-def esp32cam_strean():
+@app.route('/esp32cam_stream')
+def esp32cam_stream():
     t = threading.Thread(target=detect_motion, args=(10,))
     t.daemon = True
     t.start()
@@ -47,5 +47,5 @@ def post_status():
 
 if __name__ == '__main__':
 
-    app.run(debug=True, host='0.0.0.0', port="5000", debug=True,
+    app.run(debug=True, host='0.0.0.0', port="5000",
             threaded=True, use_reloader=False)
